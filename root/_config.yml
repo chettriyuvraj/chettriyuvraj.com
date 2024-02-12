@@ -3,10 +3,8 @@
 
 title: chettriyuvraj
 description: Yuvraj Chettri's personal blog
-# baseurl: "/jekyllBear" # the subpath of your site, e.g. /blog/
-#url: "https://knhash.in/jekyllBear" # the base hostname & protocol for your site
-host: 127.0.0.1
-
+url: https://michaelcurrin.github.io
+baseurl: /
 
 #########################
 # more settings
