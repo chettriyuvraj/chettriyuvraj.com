@@ -1,0 +1,6 @@
+theme: jekyll-bear-theme
+permalink: /:categories/:year/:month/:day/:title
+special_links:
+  Linkedin: https://www.linkedin.com/in/yuvraj-chettri/
+  Github: https://www.github.com/chettriyuvraj
+
