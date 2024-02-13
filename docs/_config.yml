@@ -6,7 +6,7 @@ domain: chettriyuvraj.github.io
 title: chettriyuvraj
 description: Yuvraj Chettri's personal blog
 url: https://chettriyuvraj.github.io
-baseurl: /root/
+baseurl: /docs
 #########################
 # more settings
 
