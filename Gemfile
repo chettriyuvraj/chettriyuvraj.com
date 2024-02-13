@@ -3,4 +3,4 @@
 source "https://rubygems.org"
 
 gem "jekyll"
-gem "jekyll-bear-theme"
+gem "github-pages", "~> 229", group: :jekyll_plugins
