@@ -1,9 +1,11 @@
 ###########
 # site.title
 
+domain: chettriyuvraj.github.io
 title: chettriyuvraj
 description: Yuvraj Chettri's personal blog
 url: https://chettriyuvraj.github.io
+baseurl: /chettriyuvraj.github.io/
 #########################
 # more settings
 
@@ -56,5 +58,5 @@ Blog: /blog
 permalink: /:categories/:year/:month/:day/:title
 
 special_links:
-  Linkedin: https://www.linkedin.com/in/yuvraj-chettri/
-  Github: https://www.github.com/chettriyuvraj
+  Linkedin: https://www.linkedin.com/in/yuvraj-chettri/
+  Github: https://www.github.com/chettriyuvraj
