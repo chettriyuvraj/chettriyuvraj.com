@@ -1,6 +1,7 @@
 ###########
 # site.title
 
+remote_theme: jekyll-bear-theme
 domain: chettriyuvraj.github.io
 title: chettriyuvraj
 description: Yuvraj Chettri's personal blog
