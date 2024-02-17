@@ -27,9 +27,6 @@ compress_html:
   ignore:
     envs: []
 
-# sass:
-#   sass_dir: css
-#   style:    compressed
 
 collections:
   my_tags:
@@ -56,7 +53,7 @@ exclude: [vendor]
 
 Blog: /blog
   
-permalink: /:categories/:year/:month/:day/:title
+  #permalink: /:categories/:year/:month/:day/:title
 
 special_links:
   Linkedin: https://www.linkedin.com/in/yuvraj-chettri/
