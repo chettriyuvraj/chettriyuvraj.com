@@ -37,6 +37,10 @@ compress_html:
   ignore:
     envs: []
 
+collections:
+  my_tags:
+    output: true
+
 timezone: America/New_York
 future: false
 exclude:
