@@ -41,7 +41,7 @@ defaults:
       permalink: /blog/:title
 
 timezone: America/New_York
-future: false
+future: true
 
 exclude:
 - README.md
