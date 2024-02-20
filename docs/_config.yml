@@ -1,14 +1,9 @@
 ###########
-# site.title
-
-#theme: jekyll-theme-hacker
 domain: chettriyuvraj.github.io
 title: chettriyuvraj
 description: Yuvraj Chettri's personal blog
 url: https://chettriyuvraj.github.io
 baseurl: /docs
-#########################
-# more settings
 
 plugins:
   - jekyll-redirect-from
@@ -32,16 +27,7 @@ collections:
   my_tags:
     output: true
     permalink: /tagged/:slug/
-defaults:
-  -
-    scope:
-      path: ""
-      type: my_tags
-    values:
-      layout: tagged
 
-# baseurl: ""
-permalink: /blog/:slug
 timezone: America/New_York
 future: false
 
@@ -53,8 +39,6 @@ exclude: [vendor]
 
 Blog: /blog
   
-  #permalink: /:categories/:year/:month/:day/:title
-
 special_links:
   Linkedin: https://www.linkedin.com/in/yuvraj-chettri/
   Github: https://www.github.com/chettriyuvraj
