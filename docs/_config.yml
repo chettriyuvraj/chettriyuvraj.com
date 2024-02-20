@@ -29,12 +29,16 @@ collections:
     permalink: /tagged/:slug/
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: my_tags
     values:
       layout: tagged
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /:year/:month/:date/:title
 
 timezone: America/New_York
 future: false
