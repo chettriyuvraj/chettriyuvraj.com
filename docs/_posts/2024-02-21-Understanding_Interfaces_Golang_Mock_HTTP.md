@@ -2,7 +2,7 @@
 layout: post
 title:  "Understanding Interfaces Through Golang: Mocking HTTP Server Response"
 date:   2024-02-21 21:21:21 +0530
-tags: [programming]
+tags: [programming, go]
 ---
 
 
