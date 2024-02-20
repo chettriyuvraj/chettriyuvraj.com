@@ -137,11 +137,11 @@ Try it yourself: Go to [transport.go](https://cs.opensource.google/go/go/+/refs/
 
 We do have a _roundTrip_ though (hmm):
 
-![[Pasted image 20240216161048.png]]
+![[/assets/images/Pasted image 20240216161048.png]]
 
 A bit more digging and we find _RoundTrip_ here: a _roundtrip.go_ file with only one method definition: for _Transport.RoundTrip_ which calls the internal _Transport.roundTrip_ we saw above. 
 
-![[Pasted image 20240216161733.png]]
+![[/assets/images/Pasted image 20240216161733.png]]
 Why this weird structuring? I have absolutely no clue! Like any other codebase, Go's source code has rabbit holes you don't want to get into. Hit me up if someone does find the commit and the reason for this, though!
 
 So far, we have:
@@ -166,22 +166,22 @@ The second line is particularly interesting. _A Client is higher level than a Ro
 Let's find out if this is true. We'll go all the way into _Client.Get()_ and see how an HTTP request is actually made.
 
 _Client.Get()_ seems to be a wrapper around _Client.Do()_. This must also apply to other methods like _Client.Post()_ (go and check):
-![[Pasted image 20240216163846.png]]
+![[/assets/images/Pasted image 20240216163846.png]]
 
 _Client.Do()_ calls into the internal _client.do()_, which looks like a hot mess:
-![[Pasted image 20240216164016.png]]
+![[/assets/images/Pasted image 20240216164016.png]]
 
 Amidst all the muck, we can make an educated guess that _Client.send()_ is executing the request:
-![[Pasted image 20240216164245.png]]
+![[/assets/images/Pasted image 20240216164245.png]]
 
 _Client.send()_ does a small couple of things, but we are interested in the _send()_ function that it calls. It also passes to the function, our _Transport_. This is getting interesting!
-![[Pasted image 20240216164458.png]]
+![[/assets/images/Pasted image 20240216164458.png]]
 
 _send()_ again is doing a bunch of stuff, but the comment tells us we are on the right track. Somewhere around here there is an HTTP request being sent:
-![[Pasted image 20240216164723.png]]
+![[/assets/images/Pasted image 20240216164723.png]]
 
 Look closely and.. it's our _Transport_! _rt.RoundTrip_ seems to be the call that is executed to get the response. We can't follow the trail anymore because _RoundTrip_ is an interface method, remember? Every _RoundTripper_ will have it's own internal implementation of _RoundTrip_ 
-![[Pasted image 20240216164912.png]]
+![[/assets/images/Pasted image 20240216164912.png]]
 
 What did we learn?
 
