@@ -54,3 +54,6 @@ Blog: /blog
 special_links:
   Linkedin: https://www.linkedin.com/in/yuvraj-chettri/
   Github: https://www.github.com/chettriyuvraj
+
+google_analytics: # hardcoded in head.html for now - not used
+  tracking_id: G-VQGGDY7F3D
